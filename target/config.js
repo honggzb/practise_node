@@ -4,7 +4,6 @@
 'use strict';
 
 module.exports = function (set, get, has) {
-  // if(has('')){
-  //
-  // }
+  // server port
+  set('web.port', 3000);
 };

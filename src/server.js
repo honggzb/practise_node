@@ -32,9 +32,14 @@ $.init.load(path.resolve(__dirname,'init','mongodb.js'));
 //load models
 $.init.load(path.resolve(__dirname,'models'));
 
+//load methods
+$.init.load(path.resolve(__dirname,'methods'));
+
 //init Express
 $.init.load(path.resolve(__dirname,'init','express'));
-//load rounte
+//init middleware
+$.init.load(path.resolve(__dirname, 'middleware'));
+//load route
 $.init.load(path.resolve(__dirname,'routes'));
 
 //初始化
@@ -53,4 +58,5 @@ $.init((err)=>{
   //   nickname: 'test User'
   // });
   // item.save(console.log);
+  require('./test');
 });

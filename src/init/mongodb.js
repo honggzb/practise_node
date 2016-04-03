@@ -9,5 +9,10 @@ module.exports = function(done){
   const conn = mongoose.createConnection($.config.get('db.mongodb'));
   $.mongodb = conn;
   $.model = {};
+
+  $.mongodb.model('User',User);
+  $.model.User = $.mongodb.model('User');
+  $.utils.ObjectId = ObjectId;
+
   done();
 };
