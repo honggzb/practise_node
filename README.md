@@ -18,7 +18,7 @@ Node.js项目实战
       },
     ```
 
-- Babel编译设置，参见[早起搬砖](morning.work)
+- Babel编译设置，参见[早起搬砖](http://morning.work)
   - `.babelrc`文件
   - `npm install babel-cli babel-preset-es2015-node4 babel-preset-stage-0 --save-dev`
   - 编译, `babel src -d target --watch`  // watch实时监视
@@ -36,4 +36,24 @@ Node.js项目实战
 - 注册路由
 - 输出debug信息
 
-### 二、
+### 二、MongoDB操作（使用firebase）
+
+```
+npm install firebase --save
+import Firebase from 'firebase';
+```
+
+firebase的使用
+
+```javascript
+// The app only has access as defined in the Security Rule
+const conn = firebase.database();
+var ref = conn.ref("/test1");
+ref.once("test1", function (snapshot) {
+  console.log(snapshot.val());
+});
+var usersRef = $.mongodb.child("User");
+$.model = $.model.User('User');
+usersRef.set($.model);
+```
+
